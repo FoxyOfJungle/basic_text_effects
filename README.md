@@ -1,4 +1,5 @@
-# draw_text_wave
-Normal draw_text(), but with rainbow and movement:
+# basic_text_effects
 
-![54564](https://user-images.githubusercontent.com/52144406/171695422-8d772739-65a6-440d-8173-aca4183147ff.gif)
+5 basic scripts for quick "wave", "rainbow" and "shake" effects if you're in a hurry:
+
+![54564](https://user-images.githubusercontent.com/52144406/171696842-7ce21038-581e-4df2-a4ce-6a815e222421.gif)
