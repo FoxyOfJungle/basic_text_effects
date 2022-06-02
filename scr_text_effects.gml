@@ -1,6 +1,7 @@
 
 /*---------------------------------------------------------------
-	Normal draw_text(), but with rainbow and movement
+	5 basic scripts for quick "wave", "rainbow" and "shake"
+	effects if you're in a hurry.
 	If str_width is not equal to 0, text will be in the middle
 ---------------------------------------------------------------*/
 
@@ -40,6 +41,20 @@ function draw_text_wave_rainbow(x, y, str, str_width, wave_amplitude=3, wave_spe
 		var _wf = (str_width == 0) ? 0 : str_width/2;
 		draw_set_color(make_color_hsv((current_time * color_speed + i*10) % 255, 255, 255));
 		draw_text(_xx - _wf, _yy + sin(i + current_time * wave_speed) * wave_amplitude, _char);
+		_xx += _ww;
+		i++;
+	}
+}
+
+function draw_text_rainbow(x, y, str, str_width, color_speed=0.1) {
+	var _xx = x, _yy = y;
+	var i = 1, isize = string_length(str);
+	repeat(isize) {
+		var _char = string_char_at(str, i);
+		var _ww = string_width(_char);
+		var _wf = (str_width == 0) ? 0 : str_width/2;
+		draw_set_color(make_color_hsv((current_time * color_speed + i*10) % 255, 255, 255));
+		draw_text(_xx - _wf, _yy, _char);
 		_xx += _ww;
 		i++;
 	}
