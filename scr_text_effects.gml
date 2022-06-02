@@ -1,9 +1,10 @@
 
-/*---------------------------------------------------------------
+/*-----------------------------------------------------------------
 	5 basic scripts for quick "wave", "rainbow" and "shake"
 	effects if you're in a hurry.
-	If str_width is not equal to 0, text will be in the middle
----------------------------------------------------------------*/
+	If str_width is not equal to 0, text will be in the middle.
+	All functions support alignment.
+-----------------------------------------------------------------*/
 
 function draw_text_wave(x, y, str, str_width, wave_amplitude=3, wave_speed=0.01) {
 	var _xx = x, _yy = y;
